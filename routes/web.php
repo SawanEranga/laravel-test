@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Route::get('/send',function(){
+
+//     echo "Email has been sent";
+// });
+Route::get('/send','Create_ticket@mails');
