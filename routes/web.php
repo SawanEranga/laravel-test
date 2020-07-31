@@ -21,3 +21,7 @@ Route::get('/', function () {
 //     echo "Email has been sent";
 // });
 Route::get('/send','Create_ticket@mails');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
