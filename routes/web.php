@@ -24,15 +24,18 @@ Route::get('/', function () {
 
 Route::get('/send','Create_tickets@mails');
 Route::get('/create-ticket','Create_tickets@createticket')->name('create_ticket');
-Route::post('/create-ticket','Create_tickets@mails')->name('create_ticket');
+// Route::post('/create-ticket','Create_tickets@mails')->name('create_ticket');
 
 // Route::view('/send','Create_ticket@mails')->name('create_ticket');
 
 Route::group(['prefix' => 'admin'], function () {
 
     Auth::routes();
+    Route::get('/reply-ticket', 'Replyticket@replyticket')->name('replyticket');
 
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/view-ticket', 'view_ticket@viewticket')->name('viewticket');
+
 
