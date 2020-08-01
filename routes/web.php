@@ -22,9 +22,9 @@ Route::get('/', function () {
 //     echo "Email has been sent";
 // });
 
-Route::get('/send','Create_tickets@mails');
-Route::get('/create-ticket','Create_tickets@createticket')->name('create_ticket');
-Route::post('/create-ticket','Create_tickets@mails')->name('create_ticket');
+//Route::get('/send','Create_tickets@mails');
+Route::get('/create-ticket-view','Create_tickets@create_ticket_view')->name('create_ticket_view');
+Route::post('/create-ticket-save','Create_tickets@create_ticket_save')->name('create_ticket_save');
 
 // Route::view('/send','Create_ticket@mails')->name('create_ticket');
 
