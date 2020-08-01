@@ -21,13 +21,14 @@ class testmail extends Mailable
     {
 
         $this->details['titel'] = $details['titel'];
+        $this->details['signature'] = $details['signature'];
         $this->details['body'] = $details['body'];
         // $this->$details = implode(" ",$details);
         // print_r($details);
         // print_r($this->details);
         // $this->$details = implode(' ', array_values($details));
 
-        
+
     }
 
     /**

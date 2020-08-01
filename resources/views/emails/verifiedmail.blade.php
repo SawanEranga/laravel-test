@@ -2,7 +2,9 @@
 
 
 <h1>{{$details['titel']}}</h1>
-<b>{{$details['body']}}</b>
+<b>{{$details['signature']}}</b>
+<br>
+<div>{{$details['body']}}</div>
 
 
 

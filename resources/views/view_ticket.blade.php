@@ -6,21 +6,19 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('View Ticket') }}</div>
+                <div class="row"></div>
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Ref ID') }}</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-5">
 
                                 <input id="ref" type="text" class="form-control @error('ref') is-invalid @enderror" name="ref" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
+                            </div>
+                            <div class="col-md-1">
                                 <button type="submit" class="btn btn-primary view-ticket-guest">
                                     {{ __('Search') }}
                                 </button>
-                                <!-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror -->
                             </div>
                         </div>
                 <div class="card-body">

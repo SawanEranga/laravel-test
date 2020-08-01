@@ -54,8 +54,8 @@ class Create_tickets extends Controller
         ]);
 
         $details = ['titel' => 'Online Support System',
-            'body' => 'Dear ' . $name . ',
-                  Your reference_number is ' . $refNo . ''
+            'signature' => 'Dear ' . $name . ',',
+            'body' => 'Your reference_number is ' . $refNo . ''
         ];
         Mail::to($sendmail)->send(new testmail($details));
         $msg = 'Ticket is created successfully';
