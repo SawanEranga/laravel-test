@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Create Ticket') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('create-ticket') }}">
+                    <form method="POST" action="{{ route('create_ticket_save') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -69,7 +69,7 @@
                             </div>
                         </div>
 
-                      
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

@@ -20,7 +20,7 @@ class SupportTicket extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('reference_number');
-            $table->string('reply');
+            $table->string('reply')->nullable();
             $table->integer('status');
             $table->timestamps();
         });
