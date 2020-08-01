@@ -59,6 +59,6 @@ class Create_tickets extends Controller
         ];
         Mail::to($sendmail)->send(new testmail($details));
         $msg = 'Ticket is created successfully';
-        return redirect()->route('view-ticket')->with('success', $msg);
+        return redirect()->route('viewticket')->with('success', $msg);
     }
 }

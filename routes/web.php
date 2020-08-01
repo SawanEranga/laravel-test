@@ -37,5 +37,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/view-ticket', 'view_ticket@viewticket')->name('viewticket');
+Route::post('/get-ticket-data', 'view_ticket@get_ticket_data')->name('get_ticket_data');
 
 

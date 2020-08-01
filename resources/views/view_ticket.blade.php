@@ -12,7 +12,8 @@
                             <div class="col-md-6">
 
                                 <input id="ref" type="text" class="form-control @error('ref') is-invalid @enderror" name="ref" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                                <button type="submit" class="btn btn-primary">
+                                <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
+                                <button type="submit" class="btn btn-primary view-ticket-guest">
                                     {{ __('Search') }}
                                 </button>
                                 <!-- @error('name')
@@ -23,7 +24,7 @@
                             </div>
                         </div>
                 <div class="card-body">
-                    
+
                         @csrf
 
                         <div class="form-group row">
@@ -84,18 +85,18 @@
                             </div>
                         </div>
 
-                      
 
-                        
-                    
+
+
+
                 </div>
                 <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Ticket Reply') }}</label>
 
                             <div class="col-md-6">
                                 <!-- <input id="pname" type="text" class="form-control @error('pname') is-invalid @enderror" name="pname" value="{{ old('pname') }}" required autocomplete="name" autofocus> -->
-                                <textarea class="form-control @error('pname') is-invalid @enderror" id="pname" rows="3" name="pname"
-                                required autocomplete="pname" autofocus></textarea>
+                                <textarea class="form-control @error('pname') is-invalid @enderror" id="rname" rows="3" name="rname"
+                                required autocomplete="rname" autofocus></textarea>
 
                                 @error('pname')
                                     <span class="invalid-feedback" role="alert">
