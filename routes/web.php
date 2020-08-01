@@ -31,11 +31,12 @@ Route::get('/create-ticket','Create_tickets@createticket')->name('create_ticket'
 Route::group(['prefix' => 'admin'], function () {
 
     Auth::routes();
-    Route::get('/reply-ticket', 'Replyticket@replyticket')->name('replyticket');
-
+    // Route::get('/reply-ticket', 'Replyticket@replyticket')->name('replyticket');
+    Route::get('home', ['uses'=>'HomeController@index', 'as'=>'home.index']);
+    // Route::get('home', ['uses'=>'HomeController@index']);
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/view-ticket', 'view_ticket@viewticket')->name('viewticket');
 
 
