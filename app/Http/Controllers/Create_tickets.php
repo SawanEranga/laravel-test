@@ -53,6 +53,6 @@ class Create_tickets extends Controller
         ];
         Mail::to($sendmail)->send(new testmail($details));
 
-        
+        return view('create_ticket');
 }
 }
