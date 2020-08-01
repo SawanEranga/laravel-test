@@ -30,8 +30,8 @@
 
                 <div class="card-body" >
               
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Create ticket</button>
-                        <button type="button" class="btn btn-success btn-lg btn-block">View ticket</button>
+                        <button type="button" onclick="window.location='{{ url("create-ticket-view") }}'" class="btn btn-primary btn-lg btn-block">Create ticket</button>
+                        <button type="button" onclick="window.location='{{ url("view-ticket") }}'" class="btn btn-success btn-lg btn-block">View ticket</button>
                 
             </div>
         </div>
