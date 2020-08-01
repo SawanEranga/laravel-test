@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+    <script type="text/javascript" src="{{ asset('js/jquery.validate.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.dataTables.min.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('js/dataTables.bootstrap4.min.js') }}" defer></script>
 <div class="container">
      <br/>
     <table class="table table-bordered data-table">
@@ -11,6 +15,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Massage</th>
+                <th>Status</th>
                 <th width="100px">Action</th>
             </tr>
         </thead>
@@ -21,7 +26,7 @@
 @endsection
 @section('footer')
 <script type="text/javascript">
-    $(function () {
+    $(document).ready(function() {
 
         var table = $('.data-table').DataTable({
             processing: true,
