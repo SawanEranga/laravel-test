@@ -22,7 +22,15 @@ Route::get('/', function () {
 //     echo "Email has been sent";
 // });
 Route::get('/send','Create_ticket@mails');
+Route::get('/create-ticket','Create_tickets@createticket')->name('create_ticket');
+Route::post('/create-ticket','Create_tickets@mails')->name('create_ticket');
+// Route::view('/send','Create_ticket@mails')->name('create_ticket');
 
-Auth::routes();
+Route::group(['prefix' => 'admin'], function () {
+
+    Auth::routes();
+
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
+
